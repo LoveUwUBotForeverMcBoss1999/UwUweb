@@ -135,11 +135,6 @@ footer {
         text-align: left;
     }
 }
-
-.dropd {
-    width: 15px;
-}
-
 /* custom scroll bar */
 /* width */
 ::-webkit-scrollbar {
