@@ -43,7 +43,19 @@ footer {
     border-radius: 10px;
     border: #d17171;
 }
-
+.bottonfandom {
+    text-align: center;
+    padding: 5px;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    /* Green text color */
+    background-color: #6b00cf;
+    border-radius: 10px;
+}
 /* Logo styling */
 .logo-container {
     display: flex;
