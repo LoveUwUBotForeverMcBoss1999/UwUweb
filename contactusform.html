@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UwU Discord Bot</title>
+    <link rel="icon" type="iconuwu" href="img/uwubot.png">
+</head>
+
+<body>
+    <h1 style="text-align: center;">UwU Feedback/Help Contact Form</h1>
+    <p style="text-align: center;">Miyuru Gunatilake(McBoss) will receive this form of yours. He will look at it as soon
+        as
+        possible. If there is a
+        question he will send you a reply email. If you need help with this, enter your contact information in the
+        message text box on this form and submit.</p>
+    <dev class="form">
+        <form id="form">
+            <div class="field">
+                <label for="from_name">Your Name</label>
+                <input type="text" name="from_name" id="from_name" required>
+            </div>
+            <div class="field">
+                <label for="to_name">Recipient's Name</label>
+                <input type="text" name="to_name" id="to_name" required>
+            </div>
+            <div class="field">
+                <label for="message">Message</label>
+                <input type="text" name="message" id="message" required>
+            </div>
+            <div class="field">
+                <label for="reply_to">Your Email</label>
+                <input type="text" name="reply_to" id="reply_to" required>
+            </div>
+
+            <input type="submit" id="button" value="Submit Form" required>
+        </form>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+        <script type="text/javascript">
+            emailjs.init('ivagWLqkdwVDHJ1Md')
+        </script>
+    </dev>
+    <a href="index.html"
+        style="text-decoration: none; text-align: center; justify-content: center; align-items: center; display: flex;">Go
+        Back To Home
+        Page</a>
+    <script>const btn = document.getElementById('button');
+
+        document.getElementById('form')
+            .addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                btn.value = 'Sending...';
+
+                const serviceID = 'default_service';
+                const templateID = 'template_bw4onh6';
+
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                        btn.value = 'Submit Email';
+                        alert('Your email was sent successfully!');
+                    }, (err) => {
+                        btn.value = 'Submit Form';
+                        alert(JSON.stringify(err));
+                    });
+            });</script>
+    <style>
+        /* Reset some default styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333333;
+            padding: 20px;
+        }
+
+        .form {
+            display: flex;
+            min-height: 50vh;
+            justify-content: center;
+            align-items: center;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .field {
+            margin-bottom: 10px;
+        }
+
+        .field label {
+            display: block;
+            font-size: 12px;
+            color: #000000;
+        }
+
+        .field input {
+            display: block;
+            min-width: 250px;
+            line-height: 1.5;
+            font-size: 14px;
+            outline: none;
+            padding: 0 30px;
+            line-height: 30px;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            background-color: aqua;
+
+        }
+
+        input[type="submit"] {
+            display: block;
+            padding: 6px 30px;
+            font-size: 14px;
+            background-color: #4460AA;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</body>
