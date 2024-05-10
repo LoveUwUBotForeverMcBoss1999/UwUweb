@@ -142,9 +142,6 @@ footer {
     }
 }
 
-.dropd {
-    width: 15px;
-}
 
 /* custom scroll bar */
 /* width */
@@ -173,11 +170,6 @@ footer {
 }
 
 .containerbutton {
-    border-radius: 100px;
-    /* Rounded corners for the container */
-    padding: 20px;
-    background-color: #FFFFFF;
-    /* White background color for the container */
     text-align: center;
 }
 
