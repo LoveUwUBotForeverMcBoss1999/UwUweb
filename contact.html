@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UwU Bot | Contact Form</title>
+    <link rel="icon" href="img/uwubot.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c427f;
+            color: #fff;
+            margin: 30px;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #003b9b;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 3px solid #fff;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .field {
+            margin-bottom: 20px;
+        }
+
+        .field label {
+            display: block;
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        .field input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4460AA;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3b52a0;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .popup-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 30%;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #alert-message {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .go-back-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4460AA;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+        }
+
+        .go-back-link:hover {
+            background-color: #3b52a0;
+        }
+
+        @media (max-width: 768px) {
+            .popup-content {
+                width: 80%;
+            }
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #4460AA;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: #3b52a0;
+        }
+
+        .arrow-icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234460AA"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>');
+            background-size: cover;
+            transition: background-image 0.3s ease;
+        }
+
+        .back-button:hover .arrow-icon {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%233b52a0"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>');
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/" class="back-button"><i class="arrow-icon"></i> Go Back to Home</a>
+
+    <div class="container">
+        <h1>UwU Bot Contact Form</h1>
+        <form id="form">
+            <div class="field">
+                <label for="to_name">To Name</label>
+                <input type="text" name="to_name" id="to_name">
+            </div>
+            <div class="field">
+                <label for="message">Message</label>
+                <input type="text" name="message" id="message">
+            </div>
+            <div class="field">
+                <label for="reply_to">Reply To</label>
+                <input type="text" name="reply_to" id="reply_to">
+            </div>
+            <div class="field">
+                <label for="from_name">From Name</label>
+                <input type="text" name="from_name" id="from_name">
+            </div>
+            <input type="submit" id="button" value="Send Email">
+        </form>
+    </div>
+
+    <div id="alert-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <p id="alert-message"></p>
+            <a href="index.html" class="go-back-link">Go Back</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init('ivagWLqkdwVDHJ1Md');
+    </script>
+    <script>
+        const btn = document.getElementById('button');
+        const popup = document.getElementById('alert-popup');
+        const alertMessage = document.getElementById('alert-message');
+        const closeButton = document.getElementsByClassName('close-button')[0];
+
+        document.getElementById('form')
+            .addEventListener('submit', function (event) {
+                event.preventDefault();
+                btn.value = 'Sending...';
+
+                const serviceID = 'default_service';
+                const templateID = 'template_bw4onh6';
+
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                        btn.value = 'Send Email';
+                        showPopup('Email sent successfully!');
+                    }, (err) => {
+                        btn.value = 'Send Email';
+                        showPopup(`Error sending email: ${JSON.stringify(err)}`);
+                    });
+            });
+
+        closeButton.addEventListener('click', function () {
+            popup.style.display = 'none';
+        });
+
+        window.addEventListener('click', function (event) {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+
+        function showPopup(message) {
+            alertMessage.textContent = message;
+            popup.style.display = 'block';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

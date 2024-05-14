@@ -4,118 +4,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UwU Discord Bot</title>
-    <link rel="icon" type="iconuwu" href="img/uwubot.png">
-    <link rel="stylesheet" href="faq.css">
-    <script src="faq.js"></script>
+    <title>UwU Bot | FAQs</title>
+    <link rel="icon" href="img/uwubot.png">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
-    <div class="topnav" id="myTopnav">
-        <a href="/" class="active">Home</a>
-        <a href="ContactUs">Contact Us</a>
-        <a href="contactusform">ContactForm</a>
-        <a href="aboutus">About Us</a>
-        <a href="donate">Donate</a>
-        <a href="faq">FAQ</a>
-        <a href="https://uwu-bot.betteruptime.com/">PageStatus</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-              </svg>
-        </a>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <img src="img/uwubot.png" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="https://discord.com/oauth2/authorize?client_id=1233747173896618094">Invite</a></li>
+                <li><a href="commands">Commands</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="donate">Donate</a></li>
+            </ul>
+        </div>
+        <div class="nav-toggle">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section class="welcome" style="margin-left: 5px; margin-right: 5px;">
+        <h1>Frequently Asked Questions</h1>
+        <div class="buttons" style="margin-top: 50px;">
+            <a href="#" class="invite-btn">Invite Bot</a>
+            <a href="#" class="join-btn">Join Server</a>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <div class="faq-container">
+        <div class="faq-item" onclick="toggleAnswer(1)">
+            <div class="faq-question">What is the uptime of the bot?</div>
+            <svg class="plus-icon" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12h14" />
+            </svg>
+        </div>
+        <div class="faq-answer" id="answer1">
+            <p>The bot has a 99.98% uptime, ensuring reliable service most of the time.</p>
+        </div>
+
+        <div class="faq-item" onclick="toggleAnswer(2)">
+            <div class="faq-question">How do I use the bot's help command?</div>
+            <svg class="plus-icon" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12h14" />
+            </svg>
+        </div>
+        <div class="faq-answer" id="answer2">
+            <p>To access the bot's help, type <code>uwu help</code> in the chat.</p>
+        </div>
+
+        <div class="faq-item" onclick="toggleAnswer(3)">
+            <div class="faq-question">Who is the owner of the bot?</div>
+            <svg class="plus-icon" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12h14" />
+            </svg>
+        </div>
+        <div class="faq-answer" id="answer3">
+            <p>The bot is owned by Miyuru Gunatilake (McBoss).</p>
+        </div>
+
+        <div class="faq-item" onclick="toggleAnswer(4)">
+            <div class="faq-question">How can I get support for the bot?</div>
+            <svg class="plus-icon" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12h14" />
+            </svg>
+        </div>
+        <div class="faq-answer" id="answer4">
+            <p>Contact the bot owner or refer to the bot's documentation for support.</p>
+        </div>
+
+        <div class="faq-item" onclick="toggleAnswer(5)">
+            <div class="faq-question">Is the bot available 24/7?</div>
+            <svg class="plus-icon" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12h14" />
+            </svg>
+        </div>
+        <div class="faq-answer" id="answer5">
+            <p>The bot operates around the clock, but occasional maintenance may occur.</p>
+        </div>
+
+        <div class="faq-item" onclick="toggleAnswer(6)">
+            <div class="faq-question">What features does the bot offer?</div>
+            <svg class="plus-icon" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12h14" />
+            </svg>
+        </div>
+        <div class="faq-answer" id="answer6">
+            <p>The bot offers various features including [list features here].</p>
+        </div>
+
+        <div class="faq-item" onclick="toggleAnswer(7)">
+            <div class="faq-question">How can I suggest improvements to the bot?</div>
+            <svg class="plus-icon" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12h14" />
+            </svg>
+        </div>
+        <div class="faq-answer" id="answer7">
+            <p>Submit your suggestions directly to the bot owner for consideration.</p>
+        </div>
+
+        <div class="faq-item" onclick="toggleAnswer(8)">
+            <div class="faq-question">What should I do if the bot is down?</div>
+            <svg class="plus-icon" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12h14" />
+            </svg>
+        </div>
+        <div class="faq-answer" id="answer8">
+            <p>Check the bot's status and wait for it to come back online, or contact the bot owner for assistance.</p>
+        </div>
+
+        <div class="faq-item" onclick="toggleAnswer(9)">
+            <div class="faq-question">Can I contribute to the bot's development?</div>
+            <svg class="plus-icon" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12h14" />
+            </svg>
+        </div>
+        <div class="faq-answer" id="answer9">
+            <p>Contributions to the bot's development may be accepted based on the bot owner's guidelines.</p>
+        </div>
+
+        <div class="faq-item" onclick="toggleAnswer(10)">
+            <div class="faq-question">How do I report a bug?</div>
+            <svg class="plus-icon" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12h14" />
+            </svg>
+        </div>
+        <div class="faq-answer" id="answer10">
+            <p>Report bugs to the bot owner with detailed information for troubleshooting.</p>
+        </div>
+
     </div>
-    <header>
-        <div class="logo-container">
-            <img src="https://i.ibb.co/HhRmg99/uwubot.png" alt="uwubot" border="0"
-                    alt="Logo" class="logo">
-        </div>
-    </header>
-    <!--FQA-->
-    <div class="container">
-        <h1>Frequently Asked Questions (FAQs)</h1>
 
-        <!-- FAQ Items -->
-        <div class="accordion-item">
-            <button class="accordion-header">What is your Discord bot all about?</button>
-            <p class="accordion-content">
-                My Discord bot is a fun bot designed to entertain users with various commands, games, and interactive
-                features within Discord servers.
-            </p>
-        </div>
-
-        <div class="accordion-item">
-            <button class="accordion-header">How can I add your bot to my Discord server?</button>
-            <p class="accordion-content">
-                You can add my bot to your Discord server by clicking on the invitation link provided on our website and
-                authorizing the bot with the necessary permissions.
-            </p>
-        </div>
-
-        <div class="accordion-item">
-            <button class="accordion-header">What commands does your bot have?</button>
-            <p class="accordion-content">
-                My bot offers a range of fun commands such as trivia, jokes, memes, and more. You can explore all
-                available commands by using the help command (`!help`) after adding the bot to your server.
-            </p>
-        </div>
-
-        <div class="accordion-item">
-            <button class="accordion-header">Can I customize the bot's behavior?</button>
-            <p class="accordion-content">
-                Currently, my bot's behavior and features are predefined and cannot be customized by users. However, I'm
-                continuously working on adding new features and updates based on user feedback.
-            </p>
-        </div>
-
-        <div class="accordion-item">
-            <button class="accordion-header">Is your bot suitable for moderation or logging purposes?</button>
-            <p class="accordion-content">
-                No, my bot is primarily designed for entertainment and fun interactions. It does not include moderation
-                or logging features for Discord servers.
-            </p>
-        </div>
-
-        <div class="accordion-item">
-            <button class="accordion-header">How often is your bot updated?</button>
-            <p class="accordion-content">
-                I strive to update my bot regularly with new features, bug fixes, and improvements. Updates are
-                typically released based on user feedback and development progress.
-            </p>
-        </div>
-
-        <div class="accordion-item">
-            <button class="accordion-header">Can I suggest new ideas or features for your bot?</button>
-            <p class="accordion-content">
-                Absolutely! I welcome suggestions and ideas for new features or improvements. Feel free to reach out via
-                our Discord server or contact form to share your thoughts.
-            </p>
-        </div>
-
-        <div class="accordion-item">
-            <button class="accordion-header">How can I report issues or bugs with the bot?</button>
-            <p class="accordion-content">
-                If you encounter any issues or bugs while using my bot, please report them via our Discord server or
-                contact form. I'll do my best to address and resolve them promptly.
-            </p>
-        </div>
-
-        <div class="accordion-item">
-            <button class="accordion-header">Is your bot available 24/7?</button>
-            <p class="accordion-content">
-                While I strive to keep my bot running smoothly, there may be occasional downtime due to maintenance or
-                technical updates. I appreciate your understanding and patience.
-            </p>
-        </div>
-    </div>
-    <!--footer-->
+    <!-- Add more FAQs here -->
+    <!-- Footer -->
     <footer>
-    <p>&copy; 2024 UwU Bot. All rights reserved. <a
-            href="https://discord.com/oauth2/authorize?client_id=1233747173896618094"><button
-                style="text-align: center;padding: 4px;background-color: #0056b3;border-radius: 10px;border: #d17171;">Invite
-                Bot</button></a>
-    </p>
+        <div class="container">
+            <div class="footer-left">
+                <img src="img/uwubot.png" alt="Logo">
+                <span>UwU Bot</span>
+            </div>
+            <div class="footer-right">
+                <ul class="nav-links">
+                    <li><a href="faq">FAQs</a></li>
+                    <li><a href="contact">Contact Us</a></li>
+                    <li><a href="https://discord.gg/7MHwVheZZN">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 UwU Discord Bot. All rights reserved.
+        </div>
     </footer>
+    <!-- Scripts (if needed) -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
