@@ -100,11 +100,3 @@ window.addEventListener('load', () => {
         }, 500);
     }, 3000);
 });
-
-setTimeout(() => {
-    loadingCircle.style.animationPlayState = 'paused';
-    loadingCircle.style.opacity = '0';
-    setTimeout(() => {
-        loadingContainer.style.display = 'none';
-    }, 500);
-}, 3000);
