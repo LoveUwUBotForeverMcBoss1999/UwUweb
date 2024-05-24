@@ -79,3 +79,32 @@ function toggleAnswer(id) {
         icon.classList.add("expanded");
     }
 }
+
+
+ // Get the loading container element
+const loadingContainer = document.getElementById('loading-container');
+const loadingCircle = document.querySelector('.loading-circle');
+
+// Show the loading container when the page is refreshing
+window.addEventListener('beforeunload', () => {
+    loadingContainer.style.display = 'flex';
+});
+
+// Stop the spinning of the loading circle after the refresh is complete and an additional 3 seconds
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        loadingCircle.style.animationPlayState = 'paused';
+        loadingCircle.style.opacity = '0';
+        setTimeout(() => {
+            loadingContainer.style.display = 'none';
+        }, 500);
+    }, 3000);
+});
+
+setTimeout(() => {
+    loadingCircle.style.animationPlayState = 'paused';
+    loadingCircle.style.opacity = '0';
+    setTimeout(() => {
+        loadingContainer.style.display = 'none';
+    }, 500);
+}, 3000);
