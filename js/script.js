@@ -81,22 +81,21 @@ function toggleAnswer(id) {
 }
 
 
- // Get the loading container element
-const loadingContainer = document.getElementById('loading-container');
-const loadingCircle = document.querySelector('.loading-circle');
+var loadingScreen = document.getElementById('loading-screen');
 
-// Show the loading container when the page is refreshing
-window.addEventListener('beforeunload', () => {
-    loadingContainer.style.display = 'flex';
-});
+        window.addEventListener('load', function() {
+            hideLoadingScreen();
+        });
 
-// Stop the spinning of the loading circle after the refresh is complete and an additional 3 seconds
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        loadingCircle.style.animationPlayState = 'paused';
-        loadingCircle.style.opacity = '0';
-        setTimeout(() => {
-            loadingContainer.style.display = 'none';
-        }, 500);
-    }, 3000);
-});
+        window.addEventListener('beforeunload', function() {
+            showLoadingScreen();
+        });
+
+        function showLoadingScreen() {
+            loadingScreen.style.display = 'flex';
+            setTimeout(hideLoadingScreen, 3000);
+        }
+
+        function hideLoadingScreen() {
+            loadingScreen.style.display = 'none';
+        }
