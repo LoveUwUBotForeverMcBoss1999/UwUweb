@@ -1,0 +1,63 @@
+/* Reset and basic styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Blog post styles */
+.blog-post {
+    padding: 40px;
+}
+
+.blog-meta {
+    margin-bottom: 20px;
+}
+
+.blog-meta span {
+    margin-right: 20px;
+    color: #888;
+}
+
+.blog-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.blog-content {
+    margin-top: 20px;
+}
+
+.blog-content p {
+    margin-bottom: 20px;
+}
+
+/* Back button styles */
+#back-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#back-btn:hover {
+    background-color: #555;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+.ccode {
+  font-family: 'Fira Code', monospace;
+}
