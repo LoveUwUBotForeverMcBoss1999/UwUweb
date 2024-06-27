@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UwU Bot | Donate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/uwubot.png">
+    <link rel="stylesheet" href="css/donate.css">
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="img/uwubot.png" alt="UwU Bot Logo" class="logo-image">
+                <div class="logo-text">UwU Bot</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://discord.com/oauth2/authorize?client_id=1233747173896618094">Invite</a></li>
+                <li><a href="commands.html">Commands</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="donate-section container">
+            <h1>Support UwU Bot</h1>
+            <div class="donate-content">
+                <p>UwU Bot is a passion project developed and maintained by a single developer. Your donations help keep the bot running and enable us to add new features and improvements. Every contribution, no matter how small, is greatly appreciated!</p>
+
+                <h2>Why Donate?</h2>
+                <ul>
+                    <li>Help cover server costs</li>
+                    <li>Support ongoing development</li>
+                    <li>Enable new feature implementations</li>
+                    <li>Show your appreciation for UwU Bot</li>
+                </ul>
+                <h2>Note:</h2>
+                <dev>
+                    <p>DM McBoss(mcboss__) to donate if you have another Method to donate to me.</p>
+                </dev>
+
+                <h2>Donation Methods</h2>
+                <div class="donation-methods">
+                    <div class="donation-method">
+                        <i class="fab fa-paypal"></i>
+                        <h3>PayPal</h3>
+                        <a href="https://www.paypal.com/donate/?hosted_button_id=UCNYYCRJNU8HA" class="donate-button">Donate with PayPal</a>
+                    </div>
+                    <div class="donation-method">
+                        <i class="fab fa-patreon"></i>
+                        <h3>Patreon</h3>
+                        <a href="https://www.patreon.com/McBoss" class="donate-button">Become a Patron</a>
+                    </div>
+                    <div class="donation-method">
+                        <i class="fas fa-ko-fi"></i>
+                        <h3>Ko-Fi</h3>
+                        <a href="https://ko-fi.com/mcboss" class="donate-button">Become a Member</a>
+                    </div>
+                </div>
+
+                <div class="thank-you">
+                    <h2>Thank You!</h2>
+                    <p>Your support means the world to us. Together, we can make UwU Bot even better!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 UwU Bot. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="https://discord.gg/7MHwVheZZN">Discord</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('.nav-links li');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    }
+                });
+
+                burger.classList.toggle('toggle');
+            });
+        }
+
+        navSlide();
+    </script>
+</body>
+
+</html>

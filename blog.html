@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UwU Bot | Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/uwubot.png">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="img/uwubot.png" alt="UltraBot Logo" class="logo-image">
+                <div class="logo-text">UwU Bot</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://discord.com/oauth2/authorize?client_id=1233747173896618094">Invite</a></li>
+                <li><a href="commands.html">Commands</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-section container">
+            <h1>UwU Bot Blog</h1>
+
+            <div class="blog-grid" id="blogPosts">
+                <!-- Blog posts will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 UwU Bot. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="https://discord.gg/7MHwVheZZN">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/blog.js"></script>
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('.nav-links li');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    }
+                });
+
+                burger.classList.toggle('toggle');
+            });
+        }
+
+        navSlide();
+    </script>
+</body>
+
+</html>

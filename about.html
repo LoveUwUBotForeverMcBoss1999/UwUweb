@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UwU Bot | About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/uwubot.png">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="img/uwubot.png" alt="UwU Bot Logo" class="logo-image">
+                <div class="logo-text">UwU Bot</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://discord.com/oauth2/authorize?client_id=1233747173896618094">Invite</a></li>
+                <li><a href="commands.html">Commands</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section container">
+            <h1>About UwU Bot</h1>
+            <div class="about-content">
+                <div class="about-text" style="margin: 20px;">
+                    <p>UwU Bot is a fun and entertaining bot created by Miyuru Gunatilake (McBoss), a solo developer who codes in Python, JavaScript, HTML, and CSS. This bot is designed to bring all sorts of fun stuff to your Discord server.</p>
+                    <h2>The Developer</h2>
+                    <p>Miyuru Gunatilake (McBoss) is doing this all alone, without any staff or team. He is the sole developer behind UwU Bot, working tirelessly to maintain and improve the bot's functionality.</p>
+                    <h2>Our Mission</h2>
+                    <p>Our mission is to provide Discord users with a fun, engaging, and versatile bot that enhances their server experience. We strive to continually update and improve UwU Bot to meet the evolving needs of our users.</p>
+                </div>
+                <div class="developer-card">
+                    <img src="img/NlaM.gif" alt="Miyuru Gunatilake (McBoss)" class="developer-image">
+                    <h3>Miyuru Gunatilake (McBoss)</h3>
+                    <p>Solo Developer</p>
+                    <ul class="developer-skills">
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 UwU Bot. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="https://discord.gg/7MHwVheZZN">Discord</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('.nav-links li');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    }
+                });
+
+                burger.classList.toggle('toggle');
+            });
+        }
+
+        navSlide();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UwU Bot | Command List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/uwubot.png">
+    <link rel="stylesheet" href="css/commands.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="img/uwubot.png" alt="UltraBot Logo" class="logo-image">
+                <div class="logo-text">UwU Bot</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://discord.com/oauth2/authorize?client_id=1233747173896618094">Invite</a></li>
+                <li><a href="commands.html">Commands</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="commands-section container">
+            <h1>UltraBot Commands</h1>
+
+            <div class="category" style="margin: 20px;">
+                <h2>Economy Commands</h2>
+                <div class="command-grid">
+                    <div class="command-item">
+                        <h3>uwu balance</h3>
+                        <p>Display your balance</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu balance {@user}</h3>
+                        <p>Display others balance</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu buy</h3>
+                        <p>Buy items from the shop</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu shop</h3>
+                        <p>Visit the shop</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu pay {@user}</h3>
+                        <p>Pay/Transfer UWU to members/users</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category" style="margin: 20px;">
+                <h2>Bank Commands</h2>
+                <div class="command-grid">
+                    <div class="command-item">
+                        <h3>uwu bsetup</h3>
+                        <p>Setup a bank account for banking</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu bprofile</h3>
+                        <p>Get the bank account info and profile</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu bbalance</h3>
+                        <p>Get your current bank balance</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu bdelete</h3>
+                        <p>Delete your current bank account</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu bwithdraw [amount]</h3>
+                        <p>Withdraw UWU Money from bank to balance</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu bdeposit [amount]</h3>
+                        <p>Deposit UWU Money into the bank</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu bloan [amount]</h3>
+                        <p>Get a bank loan to your account</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu bloansettle [amount]</h3>
+                        <p>Settle a loan amount you want</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu bloaninfo</h3>
+                        <p>Get your current bank loan status/info</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category" style="margin: 20px;">
+                <h2>Animals Commands</h2>
+                <div class="command-grid">
+                    <div class="command-item">
+                        <h3>uwu hunt</h3>
+                        <p>Go hunt for items, animals, lootboxes</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu inv</h3>
+                        <p>Display your inventory</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu send_to_barn</h3>
+                        <p>Send all animals in your inventory to barn</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu barn</h3>
+                        <p>Display your barn</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu lootbox</h3>
+                        <p>Open lootboxes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category" style="margin: 20px;">
+                <h2>Gamble Commands</h2>
+                <div class="command-grid">
+                    <div class="command-item">
+                        <h3>uwu roll [dice sides] [bet]</h3>
+                        <p>Roll a dice and bet an amount</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu coinflip [bet] [heads/tails]</h3>
+                        <p>Place bids and flip the coin</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu lottery_buy [ticket number]</h3>
+                        <p>Buy a Lottery Card</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu lottery_shop</h3>
+                        <p>Display lottery shop</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category" style="margin: 20px;">
+                <h2>For Fun Commands</h2>
+                <div class="command-grid">
+                    <div class="command-item">
+                        <h3>uwu choose [word1] [word2] [word3]</h3>
+                        <p>Choose one thing</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu cool</h3>
+                        <p>Check your cool rate</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu dadjoke</h3>
+                        <p>Get a random dad joke</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu gay</h3>
+                        <p>Check your gay rate</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu gif [search]</h3>
+                        <p>Search and get a gif</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu 8ball [question]</h3>
+                        <p>Ask the Magic 8-Ball a question</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu poll [poll] [choice2] [choice3]</h3>
+                        <p>Create a poll with multiple choices</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu rps [choice]</h3>
+                        <p>Play Rock Paper Scissors against the bot</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu say [text]</h3>
+                        <p>Make the bot repeat the provided text</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu sticker [search]</h3>
+                        <p>Search and get a sticker</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu trivia</h3>
+                        <p>Join a trivia game</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category" style="margin: 20px;">
+                <h2>Social Commands</h2>
+                <div class="command-grid">
+                    <div class="command-item">
+                        <h3>uwu avatar {@user}</h3>
+                        <p>Get a user's avatar</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu love {@user1} {@user2}</h3>
+                        <p>Get the love percentage between two players</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu pray</h3>
+                        <p>Offer a prayer or request</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category" style="margin: 20px;">
+                <h2>Meme Maker Commands</h2>
+                <div class="command-grid">
+                    <div class="command-item">
+                        <h3>uwu meme [subcommand] [text1] | [text2]</h3>
+                        <p>Make a custom meme using templates</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu memelist</h3>
+                        <p>Get all meme template Sub Commands</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category" style="margin: 20px;">
+                <h2>Actions Commands</h2>
+                <div class="command-grid">
+                    <div class="command-item">
+                        <h3>uwu [actions] {@user}</h3>
+                        <p>Show an action to another user</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category" style="margin: 20px;">
+                <h2>Cookies Commands</h2>
+                <div class="command-grid">
+                    <div class="command-item">
+                        <h3>uwu bake</h3>
+                        <p>Bake a Cookie</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu cookies</h3>
+                        <p>Get your cookies count</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu cookieleaderboard</h3>
+                        <p>Get the world Top 10 Cookie Leaderboard</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category" style="margin: 20px;">
+                <h2>Utility Commands</h2>
+                <div class="command-grid">
+                    <div class="command-item">
+                        <h3>uwu google [search]</h3>
+                        <p>Search on Google</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu invite</h3>
+                        <p>Get the UwU community update Discord invite link</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu google [math]</h3>
+                        <p>Solve maths from the bot UwU</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu pagestatus</h3>
+                        <p>Get the UwU Web page status</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu ping</h3>
+                        <p>Get UwU Bot's ping</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu stats</h3>
+                        <p>Get Bot's stats</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu shards</h3>
+                        <p>Get the shard info</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu translate [code] [text]</h3>
+                        <p>Translate words/sentences into other languages</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu ytsearch [search]</h3>
+                        <p>Search on YouTube and get closest result</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu news</h3>
+                        <p>Get the latest news in the UwU Community Update Server</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category" style="margin: 20px;">
+                <h2>Manage Server</h2>
+                <div class="command-grid">
+                    <div class="command-item">
+                        <h3>uwu enable</h3>
+                        <p>Enable this command triggering channel</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu disable</h3>
+                        <p>Disable this command triggering channel</p>
+                    </div>
+                    <div class="command-item">
+                        <h3>uwu list_enabled</h3>
+                        <p>Get a list of enabled channels</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 UwU Bot. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="https://discord.gg/7MHwVheZZN">Discord</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('.nav-links li');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    }
+                });
+
+                burger.classList.toggle('toggle');
+            });
+        }
+
+        navSlide();
+    </script>
+</body>
+
+</html>
