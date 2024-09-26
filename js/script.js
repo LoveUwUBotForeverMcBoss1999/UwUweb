@@ -1,18 +1,3 @@
-// Function to show the pop-up
-function showPopup() {
-    document.getElementById("popup").style.display = "block";
-    document.getElementById("overlay").style.display = "block";
-}
-
-// Function to close the pop-up
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-    document.getElementById("overlay").style.display = "none";
-}
-// Please remove this part of JS over this comment after remaking the bot
-
-
-
 // Preloader
 window.addEventListener('load', function() {
     const preloader = document.querySelector('.preloader');
