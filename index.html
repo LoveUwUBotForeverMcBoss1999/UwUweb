@@ -1,158 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UwU Bot | Home</title>
-    <link rel="icon" href="img/uwubot.png">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <title>UwU Bots - Simple. Powerful. Discord.</title>
+    <style>
+        :root {
+            --primary: #7C93C3;
+            --secondary: #55679C;
+            --dark: #8e1ff7;
+            --light: #E1D7B7;
+            --background: #252526;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--dark), var(--secondary), var(--primary));
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            z-index: -1;
+        }
+        
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+        
+        header {
+            background-color: rgba(30, 42, 94, 0.8);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--light);
+            text-decoration: none;
+        }
+        
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: var(--light);
+        }
+        
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: var(--light);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--light);
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .section {
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: var(--light);
+        }
+        
+        .bot-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .bot-card {
+            background-color: rgba(30, 42, 94, 0.8);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px;
+            width: 300px;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        
+        .bot-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .bot-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .bot-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: var(--light);
+        }
+        
+        footer {
+            background-color: rgba(30, 42, 94, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            backdrop-filter: blur(5px);
+        }
+    </style>
 </head>
-
 <body>
-    <div class="preloader">
-        <div class="loader"></div>
-    </div>
-
+    <div class="gradient-bg"></div>
+    
     <header>
-        <nav class="container">
-            <div class="logo-container">
-                <img src="img/uwubot.png" alt="UltraBot Logo" class="logo-image">
-                <div class="logo-text">UwU Bot</div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="https://discord.com/oauth2/authorize?client_id=1233747173896618094">Invite</a></li>
-                <li><a href="commands">Commands</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="donate">Donate</a></li>
-                <li><a href="faq">FAQs</a></li>
-                <li><a href="blog">Blog</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
+        <div class="container header-content">
+            <a href="#" class="logo">UwU Bots</a>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#bots">Bots</a>
+                <a href="#support">Support</a>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <!--<h1>Revolutionize Your Discord Server</h1>
-                <p>UwU Bot: A delightful bot designed to bring joy and entertainment to your server. From quirky commands to playful interactions,<br>it’s all about fun!</p>
-                <a href="https://discord.com/oauth2/authorize?client_id=1233747173896618094" class="cta-button">Add UwU Bot to Discord</a>-->
-                <h1>⚠️ Important Announcement ⚠️</h1>
-                <p>The UwU Bot and its owner, McBoss, will be offline for an extended period.
-Unfortunately, both the UwU Community server and McBoss's Discord account have been deleted. But don’t worry! McBoss will return with a new Discord account, recreate the UwU Community server, and rebuild the UwU Bot soon. Stay tuned for more updates!</p>
-            </div>
-            <div class="bg-animation">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <h1>Simple. Powerful. Discord.</h1>
+                <p>Elevate your server with UwU Bots. Designed for simplicity, built for power.</p>
+                <a href="#bots" class="btn">Explore Our Bots</a>
             </div>
         </section>
 
-        <section id="features" class="features">
+        <section id="bots" class="section">
             <div class="container">
-                <h2 data-aos="fade-up">Powerful Features</h2>
-                <div class="feature-grid">
-                    <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>User Balance</h3>
-                        <p>Earn UWU Money by messaging in servers with UwU Bot. Add the bot to your server to boost activity and let users spend their earnings in various ways.</p>
+                <h2 class="section-title">Our Bots</h2>
+                <div class="bot-list">
+                    <div class="bot-card">
+                        <div class="bot-icon">🎫</div>
+                        <h3>Nova Ticketing</h3>
+                        <p>Streamline your support with advanced ticketing.</p>
+                        <a href="#" class="btn">Add to Server</a>
                     </div>
-                    <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-                        <i class="fas fa-music"></i>
-                        <h3>Hunt Wild</h3>
-                        <p>Go hunting to find animals, items, and lootboxes. Send animals to your barn and open lootboxes for rare rewards. A small fee applies for each hunt.</p>
+                    <div class="bot-card">
+                        <div class="bot-icon">🛡️</div>
+                        <h3>UwU Moderation</h3>
+                        <p>Keep your community safe and friendly.</p>
+                        <a href="#" class="btn">Add to Server</a>
                     </div>
-                    <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
-                        <i class="fas fa-chart-bar"></i>
-                        <h3>Lottery Draw</h3>
-                        <p>Buy lottery cards from the lottery shop and try your luck. Match the drawn numbers to win UWU cash prizes. An exciting way to spend and potentially earn more.</p>
-                    </div>
-                    <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
-                        <i class="fas fa-robot"></i>
-                        <h3>8-Ball</h3>
-                        <p>Get random answers to your questions with the 8-Ball command. Part of the free For Fun category, enjoy this classic game without spending UWU Money.</p>
-                    </div>
-                    <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
-                        <i class="fas fa-robot"></i>
-                        <h3>Banking</h3>
-                        <p>Create a bank account to deposit and withdraw money. Earn 2% interest on your bank balance every 12 hours for passive income.</p>
-                    </div>
-                    <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
-                        <i class="fas fa-robot"></i>
-                        <h3>Bank Loan System</h3>
-                        <p>Borrow up to 1000 UWU Money. Use commands to settle your loan or check loan information. Only one active loan allowed at a time.</p>
+                    <div class="bot-card">
+                        <div class="bot-icon">🎵</div>
+                        <h3>Melody Master</h3>
+                        <p>Bring the party with our music bot.</p>
+                        <a href="#" class="btn">Add to Server</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="commands" class="commands">
+        <section id="support" class="section">
             <div class="container">
-                <h2 data-aos="fade-up">Popular Commands</h2>
-                <div class="command-list">
-                    <div class="command-item" data-aos="fade-up" data-aos-delay="100">
-                        <h3>uwu poker</h3>
-                        <p>Play poker.</p>
-                    </div>
-                    <div class="command-item" data-aos="fade-up" data-aos-delay="200">
-                        <h3>uwu spin</h3>
-                        <p>Spin th weel.</p>
-                    </div>
-                    <div class="command-item" data-aos="fade-up" data-aos-delay="300">
-                        <h3>uwu coinflup</h3>
-                        <p>Flip a coin.</p>
-                    </div>
-                    <div class="command-item" data-aos="fade-up" data-aos-delay="300">
-                        <h3>uwu gbalance</h3>
-                        <p>Get the globle top 5 balance users.</p>
-                    </div>
-                    <div class="command-item" data-aos="fade-up" data-aos-delay="400">
-                        <h3>uwu gay</h3>
-                        <p>Get user gay rate.</p>
-                    </div>
-                    <div class="command-item" data-aos="fade-up" data-aos-delay="500">
-                        <h3>uwu meme</h3>
-                        <p>Make a custom meme using a meme.</p>
-                    </div>
-                    <div class="command-item" data-aos="fade-up" data-aos-delay="600">
-                        <h3>uwu enable</h3>
-                        <p>Enable the UwU Bot for this command triggering channel.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="testimonials">
-            <div class="container">
-                <h2 data-aos="fade-up">What Our Users Say</h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-                        <img src="img/adeesha.png" alt="User 1">
-                        <p>"UwU Bot is really fun. I can have fun playing with UwU Bot command when I are bored. Rate 10/10. Puts a great effort into updating the bot I appreciate it very much"</p>
-                        <span class="author">- adeeshainduwaraXD,<br>UwU Community Manager</span>
-                    </div>
-                    <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-                        <img src="img/nalin.png" alt="User 2">
-                        <p>" It`s a very good bot for server management and entertainment. I highly recommend other to use it too. This is one of the coolest bots I have ever seen + McBoss puts a great effort into updating the bot very frequently."</p>
-                        <span class="author">- Nalina,<br>Member</span>
-                    </div>
-                    <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-                        <img src="img/mig.png" alt="User 3">
-                        <p>"As the founder of Aura TechZ, I gotta say, UwU Bot is amazing! It's super fun and makes every chat way more exciting. The features are really cool, and it's awesome how it brings joy to conversations. Keep up the great work, UwU
-                            Bot team! You guys are doing something special here."</p>
-                        <span class="author">- Migrator,<br>Aura TechZ Founder, Owner</span>
-                    </div>
+                <h2 class="section-title">Need Help?</h2>
+                <p style="text-align: center; margin-bottom: 20px;">Join our Discord support server for assistance with any of our bots.</p>
+                <div style="text-align: center;">
+                    <a href="https://discord.gg/uwubots" class="btn">Join Support Server</a>
                 </div>
             </div>
         </section>
@@ -160,19 +251,38 @@ Unfortunately, both the UwU Community server and McBoss's Discord account have b
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024 UwU Bot. All rights reserved.</p>
-                <ul class="footer-links">
-                    <li><a href="privacy">Privacy Policy</a></li>
-                    <li><a href="terms">Terms of Service</a></li>
-                    <li><a href="contact">Contact Us</a></li>
-                    <li><a href="https://discord.gg/7MHwVheZZN">Discord</a></li>
-                </ul>
-            </div>
+            <p>&copy; 2024 UwU Bots. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
-</body>
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
+        // Reveal animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".bot-card");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
 </html>
