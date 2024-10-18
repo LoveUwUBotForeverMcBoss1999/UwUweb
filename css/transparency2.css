@@ -66,3 +66,18 @@
     --background-tertiary: none;
 	--background-accent: none;
 }
+
+
+/* Adding dark semi-transparent background to normal message bubbles */
+.da-app .message-1PNnaP, .da-app .message-1PNnaP .contents-2mQqc9 {
+    background-color: rgba(0, 0, 0, 0.2) !important; /* Dark background with 20% opacity */
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6), -2px -2px 5px rgba(255, 255, 255, 0.2); /* Embossing shadow effect */
+}
+
+/* Optional: Further adjustments to message container for better spacing */
+.da-app .messagesWrapper-3lZDfY {
+    padding: 15px;
+}
